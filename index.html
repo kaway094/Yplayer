@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>تشغيل في YPlayer Pro</title>
+  <title>تشغيل في ExoPlayer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -12,35 +12,40 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: sans-serif;
       flex-direction: column;
-      text-align: center;
+      font-family: sans-serif;
     }
+
     button {
-      padding: 12px 20px;
-      background: #1e88e5;
-      color: white;
+      padding: 12px 24px;
       font-size: 18px;
+      background-color: #1e88e5;
       border: none;
       border-radius: 8px;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #1565c0;
     }
   </style>
 </head>
 <body>
 
-<h2>تشغيل الرابط في YPlayer Pro</h2>
-<button onclick="openYPlayer()">▶️ تشغيل الآن</button>
+<h2>تشغيل في ExoPlayer</h2>
+<button onclick="openExo()">▶️ تشغيل الآن</button>
 
 <script>
-  function openYPlayer() {
-    const url = "https://example.com/video.m3u8"; // <-- ضع هنا رابط البث الحقيقي
+  function openExo() {
+    // استبدل هذا بالرابط الفعلي للبث الخاص بك
+    const videoUrl = "https://example.com/video.m3u8";
 
-    // نحاول فتح الرابط عبر intent
-    window.location.href = "intent:" + url + "#Intent;package=yplayer.pro;type=video/*;scheme=https;end";
-    
-    // كاحتياط، إعادة توجيه بعد قليل في حال فشل الفتح
+    // محاولة فتح التطبيق باستخدام intent
+    window.location.href = "intent:" + videoUrl + "#Intent;package=com.sportem.exoplayer;type=video/*;scheme=https;end";
+
+    // احتياطي: إذا لم يتم التحويل، يظهر تنبيه
     setTimeout(() => {
-      alert("تأكد من تثبيت تطبيق YPlayer Pro على جهازك");
+      alert("تأكد من أن تطبيق ExoPlayer مثبت على جهازك.");
     }, 2000);
   }
 </script>
