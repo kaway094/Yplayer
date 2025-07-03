@@ -33,19 +33,19 @@
 <body>
 
 <h2>تشغيل في ExoPlayer</h2>
-<button onclick="openExo()">▶️ تشغيل الآن</button>
+<button onclick="launchVideo()">▶️ تشغيل الآن</button>
 
 <script>
-  function openExo() {
-    // استبدل هذا بالرابط الفعلي للبث الخاص بك
+  function launchVideo() {
+    // رابط البث الحقيقي
     const videoUrl = "https://example.com/video.m3u8";
 
-    // محاولة فتح التطبيق باستخدام intent
-    window.location.href = "intent:" + videoUrl + "#Intent;package=com.sportem.exoplayer;type=video/*;scheme=https;end";
+    // فتح الرابط بشكل عادي (سيسأل الجهاز: فتح بـ ExoPlayer أو غيره)
+    window.location.href = videoUrl;
 
-    // احتياطي: إذا لم يتم التحويل، يظهر تنبيه
+    // كاحتياط: إذا لم يُفتح شيء
     setTimeout(() => {
-      alert("تأكد من أن تطبيق ExoPlayer مثبت على جهازك.");
+      alert("إذا لم يُفتح الرابط، تأكد من تثبيت ExoPlayer وضبطه كمشغل افتراضي.");
     }, 2000);
   }
 </script>
