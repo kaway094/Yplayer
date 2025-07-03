@@ -1,41 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>تشغيل في ExoPlayer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تشغيل الفيديو في YPlayer Pro</title>
   <style>
     body {
-      background-color: black;
-      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #111;
+      color: #fff;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 50px;
     }
-    button {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      font-size: 18px;
+    a {
+      padding: 15px 25px;
+      background-color: #ff9800;
       border-radius: 8px;
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h2>تشغيل الفيديو في ExoPlayer</h2>
-  <button onclick="openExternally()">تشغيل الآن</button>
-
-  <script>
-    function openExternally() {
-      const videoUrl = "https://your-domain.com/stream.m3u8";
-
-      // هذا يفتح الرابط في المتصفح الخارجي، من ثم المستخدم يختار التطبيق (مثل VLC أو ExoPlayer)
-      window.open(videoUrl, '_blank');
-
-      // أو نستخدم intent بشكل يدوي في التطبيقات الأصلية فقط (لا يعمل مع WebView للأسف)
-    }
-  </script>
+  <a href="intent://sportlo.live/BEIN-3/tracks-v1a1/mono.m3u8#Intent;package=yplayer.pro;action=android.intent.action.VIEW;type=video/*;end">
+    ▶️ تشغيل الفيديو في YPlayer Pro
+  </a>
 </body>
 </html>
