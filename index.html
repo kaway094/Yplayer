@@ -1,33 +1,17 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تشغيل الفيديو في Xpola Player</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
+myWebView.setWebViewClient(new WebViewClient() {
+  @Override
+  public boolean shouldOverrideUrlLoading(WebView view, String url) {
+    if (url.startsWith("intent://")) {
+      try {
+        Intent intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
+        if (intent != null) {
+          view.getContext().startActivity(intent);
+          return true;
+        }
+      } catch (URISyntaxException e) {
+        e.printStackTrace();
+      }
     }
-    a {
-      padding: 15px 25px;
-      background-color: #03a9f4;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #000;
-      font-size: 18px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <a href="intent://sportlo.live/BEIN-3/tracks-v1a1/mono.m3u8#Intent;package=com.xpola.player;action=android.intent.action.VIEW;type=video/*;end">
-    ▶️ تشغيل الفيديو في Xpola Player
-  </a>
-</body>
-</html>
+    return false;
+  }
+});
