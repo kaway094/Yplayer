@@ -8,35 +8,42 @@
     body {
       background-color: black;
       color: white;
-      font-family: sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      font-family: sans-serif;
       flex-direction: column;
+      text-align: center;
     }
-
-    a {
+    button {
+      padding: 12px 20px;
       background: #1e88e5;
       color: white;
-      padding: 15px 25px;
-      border-radius: 10px;
-      text-decoration: none;
       font-size: 18px;
-    }
-
-    a:hover {
-      background: #1565c0;
+      border: none;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
 
-<h2>تشغيل الفيديو في YPlayer Pro</h2>
+<h2>تشغيل الرابط في YPlayer Pro</h2>
+<button onclick="openYPlayer()">▶️ تشغيل الآن</button>
 
-<a href="intent://play?url=https://example.com/video.m3u8#Intent;package=yplayer.pro;scheme=http;type=video/*;end">
-  ▶️ تشغيل الآن
-</a>
+<script>
+  function openYPlayer() {
+    const url = "https://example.com/video.m3u8"; // <-- ضع هنا رابط البث الحقيقي
+
+    // نحاول فتح الرابط عبر intent
+    window.location.href = "intent:" + url + "#Intent;package=yplayer.pro;type=video/*;scheme=https;end";
+    
+    // كاحتياط، إعادة توجيه بعد قليل في حال فشل الفتح
+    setTimeout(() => {
+      alert("تأكد من تثبيت تطبيق YPlayer Pro على جهازك");
+    }, 2000);
+  }
+</script>
 
 </body>
 </html>
