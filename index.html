@@ -1,17 +1,27 @@
-myWebView.setWebViewClient(new WebViewClient() {
-  @Override
-  public boolean shouldOverrideUrlLoading(WebView view, String url) {
-    if (url.startsWith("intent://")) {
-      try {
-        Intent intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
-        if (intent != null) {
-          view.getContext().startActivity(intent);
-          return true;
-        }
-      } catch (URISyntaxException e) {
-        e.printStackTrace();
-      }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DW Player - YPlayer Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: black;
     }
-    return false;
-  }
-});
+    #video-player {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- مشغل DW Player -->
+  <video id="video-player" controls autoplay>
+    <source src="https://www.sportlo.live/BEIN-3/tracks-v1a1/mono.m3u8" type="application/x-mpegURL">
+    متصفحك لا يدعم تشغيل الفيديو
+  </video>
+
+</body>
+</html>
