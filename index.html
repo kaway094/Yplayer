@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>DW Player - YPlayer Pro</title>
+  <title>تشغيل البث في DW Player</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      margin: 0;
-      background: black;
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
     }
-    #video-player {
-      width: 100vw;
-      height: 100vh;
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 25px;
+      background-color: #0069d9;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
 
-  <!-- مشغل DW Player -->
-  <video id="video-player" controls autoplay>
-    <source src="https://www.sportlo.live/BEIN-3/tracks-v1a1/mono.m3u8" type="application/x-mpegURL">
-    متصفحك لا يدعم تشغيل الفيديو
-  </video>
+  <h1>تشغيل البث المباشر في DW Player</h1>
+  <p>اضغط الزر لفتح البث في تطبيق DW Player</p>
+
+  <a href="intent://dream4k.co:8080/series/109219152973105/fxnfo9ofnx/1317465.ts#Intent;package=com.dwplayer.app;scheme=http;end;">
+    افتح في DW Player
+  </a>
 
 </body>
 </html>
