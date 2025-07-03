@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>تشغيل في ExoPlayer</title>
@@ -8,47 +8,34 @@
     body {
       background-color: black;
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
     }
-
     button {
-      padding: 12px 24px;
-      font-size: 18px;
-      background-color: #1e88e5;
+      background-color: #4CAF50;
       border: none;
-      border-radius: 8px;
       color: white;
-    }
-
-    button:hover {
-      background-color: #1565c0;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
+  <h2>تشغيل الفيديو في ExoPlayer</h2>
+  <button onclick="openExternally()">تشغيل الآن</button>
 
-<h2>تشغيل في ExoPlayer</h2>
-<button onclick="launchVideo()">▶️ تشغيل الآن</button>
+  <script>
+    function openExternally() {
+      const videoUrl = "https://your-domain.com/stream.m3u8";
 
-<script>
-  function launchVideo() {
-    // رابط البث الحقيقي
-    const videoUrl = "https://example.com/video.m3u8";
+      // هذا يفتح الرابط في المتصفح الخارجي، من ثم المستخدم يختار التطبيق (مثل VLC أو ExoPlayer)
+      window.open(videoUrl, '_blank');
 
-    // فتح الرابط بشكل عادي (سيسأل الجهاز: فتح بـ ExoPlayer أو غيره)
-    window.location.href = videoUrl;
-
-    // كاحتياط: إذا لم يُفتح شيء
-    setTimeout(() => {
-      alert("إذا لم يُفتح الرابط، تأكد من تثبيت ExoPlayer وضبطه كمشغل افتراضي.");
-    }, 2000);
-  }
-</script>
-
+      // أو نستخدم intent بشكل يدوي في التطبيقات الأصلية فقط (لا يعمل مع WebView للأسف)
+    }
+  </script>
 </body>
 </html>
