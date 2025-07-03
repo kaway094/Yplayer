@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>تشغيل تلقائي في YPlayer Pro</title>
+  <title>تشغيل في YPlayer Pro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-    window.onload = function() {
-      window.location.href = "intent://dream4k.co:8080/series/109219152973105/fxnfo9ofnx/1317465.ts#Intent;package=yplayer.pro;scheme=http;end;";
-    };
-  </script>
   <style>
     body {
       background-color: black;
@@ -18,11 +13,30 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      text-align: center;
+      flex-direction: column;
+    }
+
+    a {
+      background: #1e88e5;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    a:hover {
+      background: #1565c0;
     }
   </style>
 </head>
 <body>
-  <p>يتم الآن تحويلك تلقائيًا لتشغيل البث في YPlayer Pro...</p>
+
+<h2>تشغيل الفيديو في YPlayer Pro</h2>
+
+<a href="intent://play?url=https://example.com/video.m3u8#Intent;package=yplayer.pro;scheme=http;type=video/*;end">
+  ▶️ تشغيل الآن
+</a>
+
 </body>
 </html>
