@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>تشغيل تلقائي في DW Player</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Open in Yplayer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
-    window.onload = function() {
-      window.location.href = "intent://dream4k.co:8080/series/109219152973105/fxnfo9ofnx/1317465.ts#Intent;package=com.dwplayer.app;scheme=http;end;";
+    window.onload = function () {
+      const videoUrl = encodeURIComponent("http://dream4k.co:8080/series/109219152973105/fxnfo9ofnx/1317465.ts");
+
+      // فتح تطبيق Yplayer عبر intent
+      window.location.href = `intent://${videoUrl}#Intent;scheme=http;package=com.Yplayer.pro;end`;
+
+      // fallback: إظهار رابط مباشر بعد 3 ثوانٍ
+      setTimeout(() => {
+        document.getElementById("fallback").style.display = "block";
+      }, 3000);
     };
   </script>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-  </style>
 </head>
-<body>
-  <p>يتم الآن تحويلك تلقائيًا لتشغيل البث في DW Player...</p>
+<body style="background:black; color:white; text-align:center; padding-top:100px;">
+  <h2>Opening Yplayer...</h2>
+  <div id="fallback" style="display:none;">
+    <p>If it doesn't open, <a href="http://dream4k.co:8080/series/109219152973105/fxnfo9ofnx/1317465.ts" style="color:red;">click here to watch</a>.</p>
+  </div>
 </body>
 </html>
