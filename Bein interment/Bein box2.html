@@ -1,77 +1,15 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
+  <title>Redirecting to Video...</title>
   <meta charset="UTF-8">
-  <title>لوحة تحكم IPTV</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #00ff00;
-      font-family: Tahoma, sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      margin-bottom: 20px;
-    }
-    .channel {
-      background-color: #1e1e1e;
-      margin: 10px auto;
-      padding: 15px;
-      width: 80%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ff00;
-    }
-    input {
-      width: 80%;
-      padding: 10px;
-      margin-top: 10px;
-      background-color: #333;
-      color: #fff;
-      border: 1px solid #00ff00;
-      border-radius: 5px;
-    }
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #00ff00;
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #33ff33;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>لوحة تحكم IPTV</h1>
-
-  <div class="channel">
-    <h3>Bein 1</h3>
-    <input id="bein1" placeholder="ضع رابط Base64">
-  </div>
-
-  <div class="channel">
-    <h3>SSC 1</h3>
-    <input id="ssc1" placeholder="ضع رابط Base64">
-  </div>
-
-  <button onclick="saveData()">💾 حفظ البيانات</button>
-
   <script>
-    function saveData() {
-      const bein1 = document.getElementById('bein1').value;
-      const ssc1 = document.getElementById('ssc1').value;
-      const data = {
-        bein1: bein1,
-        ssc1: ssc1
-      };
-      alert('🚀 تم حفظ الروابط (في الذاكرة فقط حتى الآن)');
-      console.log('Saved Data:', data);
-    }
+    window.onload = function() {
+      window.location.href = "intent://aHR0cDovL3VnZWVuLmxpdmU6ODA4MC9saXZlL1VnZWVuX1ZJUHNhdERteC9UeXM5emUvNDM2My50c3x0aXRsZT1IZA#Intent;scheme=xmtv;package=com.adam.players;end";
+    };
   </script>
 </body>
 </html>
