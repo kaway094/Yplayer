@@ -1,1 +1,15 @@
-teeeeest
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting to Video...</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <script>
+    window.onload = function() {
+      window.location.href = "intent://XPOLA808SzJ4ZGRgYyo/P3QjfyNzeX0mZWp/YnIkPnN8f2V0dmJ/fmQ+fnVkP39lZD9mIT8gKSYldSR0J3R1cXUkKSEnKSEnIiQiJnNydnIjcnMldT95fnR1aD59I2UobGBxY2MtICAocnQlcXQpI3InJSR0JSAgIyMocyIlI3QpcyEnJyBsfnF9dS1dZXxkeTI8MnhkZGBjKj8/fXJzIT11fnM+dXR3dX51aGRzdH4+fnVkP39lZD9mIT8gKSYldSR0J3R1cXUkKSEnKSEnIiQiJnNydnIjcnMldT95fnR1aD59I2UobH5xfXUtQyIyTQ#Intent;scheme=xmtv;package=com.adam.players;end";
+    };
+  </script>
+</body>
+</html>
